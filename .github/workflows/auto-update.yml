@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@4
       - name: Install Dependencies
         run: npm install
       - name: Remove Duplicates
@@ -23,7 +23,7 @@ jobs:
     needs: remove-duplicates
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Download Artifacts
         uses: actions/download-artifact@v2
       - name: Install Dependencies
@@ -40,7 +40,7 @@ jobs:
     needs: filter
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Download Artifacts
         uses: actions/download-artifact@v2
       - name: Install Dependencies
@@ -57,7 +57,7 @@ jobs:
     needs: format
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Download Artifacts
         uses: actions/download-artifact@v2
       - name: Install Dependencies
@@ -74,7 +74,7 @@ jobs:
     needs: generate
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Download Artifacts
         uses: actions/download-artifact@v2
       - name: Install Dependencies
@@ -91,7 +91,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Download /channels
         uses: actions/download-artifact@v2
         with:
